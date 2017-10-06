@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>万年历</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/BootStrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="__PUBLIC__/BootStrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/BootStrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header text-center">
+			<h3>万年历</h3>
+			<h4>{$year}-{$month}</h4>
+		</div>
+		<div>
+			<table class="table table-striped table-bordered table-hover">
+				<tr>
+					<th>周日</th>
+					<th>周一</th>
+					<th>周二</th>
+					<th>周三</th>
+					<th>周四</th>
+					<th>周五</th>
+					<th>周六</th>
+				</tr>
+				<foreach name="arr" item="arr2">
+					<tr>
+						<foreach name="arr2" item="row">
+							<td>{$row}</td>
+						</foreach>
+					</tr>
+				</foreach>
+				<tr>
+					<ul class="pager">
+						<li><a href="__URL__/index?date={$premonth}">上一月</a></li>
+						<li><a href="__URL__/index?date={$nextmonth}">下一月</a></li>
+					</ul>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
