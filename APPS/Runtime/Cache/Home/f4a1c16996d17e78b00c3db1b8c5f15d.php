@@ -29,8 +29,8 @@
 					</tr><?php endforeach; endif; ?>
 				<tr>
 					<ul class="pager">
-						<li><a href="/TPPHP/index.php/Home/Index/index?date=<?php echo ($premonth); ?>">上一月</a></li>
-						<li><a href="/TPPHP/index.php/Home/Index/index?date=<?php echo ($nextmonth); ?>">下一月</a></li>
+						<li><a href="/TPPHP/Home/Index/index?date=<?php echo ($premonth); ?>">上一月</a></li>
+						<li><a href="/TPPHP/Home/Index/index?date=<?php echo ($nextmonth); ?>">下一月</a></li>
 					</ul>
 				</tr>
 			</table>
