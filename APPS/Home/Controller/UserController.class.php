@@ -4,8 +4,11 @@ use Think\Controller;
 
 class UserController extends Controller{
 	public function index(){
-		$this -> a = 123;
-		$this -> display();
+		//判断登录
+		if(!session("login")){
+			$this -> redirect('Login/index');
+		}
+		
 	}
 
 	public function show(){
