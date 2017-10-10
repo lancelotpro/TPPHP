@@ -2,14 +2,9 @@
 namespace Home\Controller;
 use Think\Controller;
 
-class UserController extends Controller{
+class UserController extends CommonController{
 	public function index(){
-		//判断登录
-		if(session("?login")){
-			$this -> display();
-		}else{
-			$this -> redirect("Login/index");
-		}
+		$this -> display();
 		
 	}
 
