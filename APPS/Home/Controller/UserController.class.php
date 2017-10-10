@@ -5,8 +5,10 @@ use Think\Controller;
 class UserController extends Controller{
 	public function index(){
 		//判断登录
-		if(!session("login")){
-			$this -> redirect('Login/index');
+		if(session("?login")){
+			$this -> display();
+		}else{
+			$this -> redirect("Login/index");
 		}
 		
 	}

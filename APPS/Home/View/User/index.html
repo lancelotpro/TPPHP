@@ -9,7 +9,11 @@
 </head>
 <body>
 	<div class="container">
-		<button class="btn btn-default">123123</button>
+		<div class="page-header">
+			<h3>欢迎登录！{:session("username")}</h3>
+		</div>
+		<span><a class="btn btn-default" href="{:U('Login/logout')}">退出登录</a></span>
+
 	</div>
 </body>
 </html>
