@@ -45,13 +45,22 @@ class LoginController extends Controller{
 
 	//创建新用户
 	public function insertNewUser(){
-		$Verify = new \Think\Verify();
-		$verify = $_POST["verify"];
-		$Verify -> check($verify);
+		//用户输入的验证码
+		$verify_code = $_POST["verify_code"];
+		//校验
+		$verify = new \Think\Verify();
+		if($verify -> check($verify_code)){
+			echo "验证码正确";
+		}else{
+			echo "验证码错误";
+		}
+	}
 
-		echo "verify_code :".$Verify;
-		echo "<br>";
-		echo "verify".$verify;
+	//Ajax校验验证码
+	public function verifyAjax($code, $id = ''){
+		$verify = new \Think\Verify();
+		$result = $verify -> check($code, $id);
+		return $this -> ajaxReturn($result, 'json');
 	}
 }
 

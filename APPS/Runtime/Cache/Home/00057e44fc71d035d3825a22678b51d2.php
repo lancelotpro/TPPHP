@@ -9,10 +9,27 @@
 	<script type="text/javascript">
 		$(function (){
 			$("#verify_img").click(function (){
-				var url = "/TPPHP/Home/Login/create_verify";
+				var url = "/TPPHP/Home/Login/verify";
 				var time = new Date();
 				$(this).attr("src",url+"/"+time);
-			})
+			});
+			//验证码验证
+			$("#verify_code").change(function (){
+				var url = "/TPPHP/Home/Login/verifyAjax";
+				var data = {code:$(this).val(),date:new Date()};
+				$.post(url,data,function(data){
+					var verify_div = $("#verify_div");
+					//删除样式
+					verify_div.removeClass("has-error");
+					verify_div.removeClass("has-success");
+					//验证后添加回去
+					if(data){
+						verify_div.addClass("has-success");
+					}else{
+						verify_div.addClass("has-error");
+					}
+				});
+			});
 		});
 	</script>
 </head>
@@ -26,26 +43,26 @@
 			  <div class="form-group">
 			    <label for="username" class="col-sm-2 control-label">用户名</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputEmail3" placeholder="用户名">
+			      <input type="text" class="form-control" id="username" placeholder="用户名">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="password" class="col-sm-2 control-label">密码</label>
 			    <div class="col-sm-10">
-			      <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+			      <input type="password" class="form-control" id="password" placeholder="密码">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="password2" class="col-sm-2 control-label">确认密码</label>
 			    <div class="col-sm-10">
-			      <input type="password" class="form-control" id="inputPassword3" placeholder="确认密码">
+			      <input type="password" class="form-control" id="password2" placeholder="确认密码">
 			    </div>
 			  </div>
-			  <div class="form-group">
-			    <label for="verify" class="col-sm-2 control-label">验证码</label>
+			  <div class="form-group has-error" id="verify_div">
+			    <label for="verify_code" class="col-sm-2 control-label">验证码</label>
 			    <div class="col-sm-10">
-			    	<img id="verify_img" src="/TPPHP/Home/Login/create_verify">
-			      	<input type="text" class="form-control" name="verify" placeholder="验证码">
+			    	<img id="verify_img" src="<?php echo U('verify');?>">
+			      	<input type="text" class="form-control" id="verify_code" name="verify_code" placeholder="验证码">
 			    </div>
 			  </div>
 			  <div class="form-group">
