@@ -31,7 +31,7 @@ class LoginController extends Controller{
 		}
 	}
 
-	//注册
+	//注册页面
 	public function reg(){
 		$this -> display();
 	}
@@ -43,16 +43,21 @@ class LoginController extends Controller{
 		$verify -> entry();
 	}
 
-	//创建新用户
+	//注册创建新用户
 	public function insertNewUser(){
 		//用户输入的验证码
 		$verify_code = $_POST["verify_code"];
 		//校验
-		$verify = new \Think\Verify();
-		if($verify -> check($verify_code)){
-			echo "验证码正确";
+		$user = D("User");
+		if($user -> create()){
+			//部门
+			$user -> dept_id = 1;
+			$user -> add();
+			session("username",$_POST['username']);
+			session("login",1);
+			$this -> success("登录成功！",U("User/index"),1);
 		}else{
-			echo "验证码错误";
+			$this -> error("注册失败，{$user -> getError()}","reg",2); 		
 		}
 	}
 
