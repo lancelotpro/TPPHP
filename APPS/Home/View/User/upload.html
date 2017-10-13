@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Upload</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/BootStrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="__PUBLIC__/BootStrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/BootStrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<form action="{:U('uploadImg')}" enctype="multipart/form-data" method="post" >
+		<input type="text" name="name" />
+		<input type="file" name="photo" />
+		<input type="submit" value="提交" >
+	</div>
+</form>
+</body>
+</html>

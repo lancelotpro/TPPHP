@@ -11,6 +11,7 @@
 	<div class="container">
 		<div class="page-header">
 			<h3>欢迎登录！<?php echo session("username");?></h3>
+			<span><a class="btn btn-default" href="<?php echo U('upload');?>">上传文件</a></span>
 			<span><a class="btn btn-default" href="<?php echo U('Login/logout');?>">退出登录</a></span>
 		</div>
 		<div>
