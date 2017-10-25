@@ -1,0 +1,52 @@
+/* init初始化 */
+
+html,body,ul,li,p,h1,h2,h3,h4,h5,h6,form,img {
+    margin:0;
+    padding:0
+}
+
+img {
+    border:0;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+input{
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #a88a58;
+}
+
+body {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #FFFFFF;
+    background-color: #33383a;
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    zoom:1;
+}

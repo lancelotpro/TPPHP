@@ -1,0 +1,49 @@
+
+/**
+	居中的宽度
+*/
+.center {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/**
+	顶部
+*/
+.top {
+	height: 60px;
+}
+
+.top .c_top {
+	height: 60px;
+}
+
+.top .c_top .top_r {
+	height: 25px;
+	width: 250px;
+	background-color: #0b0b0d;
+	line-height: 25px;
+	text-align: center;
+}
+
+/**
+	Banner
+*/
+.banner {
+	height: 40px;
+	background: #0b0b0d;
+}
+
+.banner .c_banner {
+	height: 40px;
+}
+
+.banner .c_banner .logo a img{
+	margin-top: -35px;
+}
+
+.banner .c_banner .b_list li{
+	float: left;
+	font-size: 15px;
+	margin: 10px;
+}

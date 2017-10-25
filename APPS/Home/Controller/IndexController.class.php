@@ -48,4 +48,8 @@ class IndexController extends Controller {
 
     	$this -> display();
     }
+
+    public function index1(){
+        $this -> display();
+    }
 }
