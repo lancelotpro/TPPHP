@@ -8,7 +8,7 @@ p {
 	font-family: 宋体;
 }
 .font_warning {
-	margin-left: 500px;
+	margin-left: 470px;
 	width: 82px;
 	height: 33px;
 	background-color: #cf302d;
@@ -176,4 +176,79 @@ p {
 
 .sep_SSSH .c_SSSH .c_SSSH_list a{
 	font-size: 15px;
+}
+
+/**
+	公告栏&最新微博信息
+*/
+.sep_GGWB {
+	height: 150px;
+}
+
+.sep_GGWB .c_GGWB {
+	height: 150px;
+}
+
+.sep_GGWB .c_GGWB .sep_c_GG {
+	height: 150px;
+	width: 500px;
+}
+.sep_GGWB .sep_c_GG .font_warning{
+	margin-left: 200px;
+}
+
+.sep_GGWB .c_GGWB .sep_c_WB {
+	height: 150px;
+	width: 500px;
+}
+
+.sep_GGWB .c_GGWB .sep_c_WB .font_warning{
+	margin-left: 200px;
+}
+
+/**
+	底部
+*/
+.foot {
+	height: 260px;
+	background-color: #0b0b0d;
+}
+.foot li {
+	padding: 5px;
+}
+
+.foot .c_foot {
+	height: 260px;	
+}
+
+.foot .c_foot .c_foot_img {
+	width: 250px;
+	height: 260px;
+	text-align: center;
+}
+.foot .c_foot .c_foot_img img{
+	padding-top: 50px;
+}
+.foot .c_foot .c_foot_ul {
+	width: 250px;
+	text-align: center;
+}
+.foot .c_foot h2{
+	font-size: 20px;
+	color: #cf302d;
+	line-height: 50px;
+}
+
+.foot .c_foot .c_foot_joinus {
+	width: 250px;
+}
+.foot .c_foot .c_foot_contrat {
+	width: 250px;
+}
+.foot .foot_banner {
+	background-color: #1c2023;
+	height: 40px;
+}
+.foot .c_fbanner p {
+	line-height: 40px;
 }
