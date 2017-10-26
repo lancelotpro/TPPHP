@@ -1,3 +1,20 @@
+h3 {
+	color: #a87d39;
+	font-family: 宋体;
+	font-size: 18px;
+}
+p {
+	color: #abb6ba;
+	font-family: 宋体;
+}
+.font_warning {
+	margin-left: 500px;
+	width: 82px;
+	height: 33px;
+	background-color: #cf302d;
+	text-align: center;
+	line-height: 35px;
+}
 
 /**
 	居中的宽度
@@ -46,4 +63,117 @@
 	float: left;
 	font-size: 15px;
 	margin: 10px;
+}
+
+/**
+	分割线
+*/
+.sep {
+	height: 65px;
+}
+.sep .c_sep {
+	height: 65px;
+}
+
+/**
+	轮播图
+*/
+.carousel {
+	height: 412px;
+}
+
+.carousel .c_carousel {
+	height: 412px;
+}
+
+.carousel .c_carousel .carousel_panel {
+	height: 352px;
+	width: 1000px;
+	margin-top: 23px;
+	background-color: black;
+}
+
+/**
+	欢迎&关注
+*/
+.welcome {
+	height: 95px;
+}
+
+.welcome .c_welcome {
+	height: 95px;
+}
+
+.welcome .c_welcome .w_left {
+	height: 95px;
+	width: 700px;
+	line-height: 25px;
+}
+.welcome .c_welcome .w_left p{
+	line-height: 50px;
+}
+.welcome .c_welcome .w_sep {
+	
+}
+.welcome .c_welcome .w_right {
+	height: 95px;
+	width: 234px;
+	line-height: 25px;
+}
+
+/**
+	最新动态
+*/
+.sep_ZXDT {
+	height: 270px;
+}
+
+.sep_ZXDT .c_ZXDT {
+	height: 270px;
+}
+
+.sep_ZXDT .c_ZXDT .c_ZXDT_imglist {
+	height: 237px;
+	text-align: center;
+}
+
+.sep_ZXDT .c_ZXDT .c_ZXDT_imglist .ZXDT_img{
+	margin-top: 33px;
+	width: 215px;
+	height: 133px;
+	margin-left: 10px;
+	margin-right: 23px;
+	background-color: #202325;
+}
+
+.sep_ZXDT .c_ZXDT .c_ZXDT_imglist .ZXDT_img img{
+	padding: 2px;
+}
+
+.sep_ZXDT .c_ZXDT .c_ZXDT_imglist .ZXDT_img a{
+	font-size: 15px;
+}
+
+/**
+	时尚生活推荐
+*/
+.sep_SSSH {
+	margin-top: 48px;
+	height: 340px;
+}
+
+.sep_SSSH .c_SSSH {
+	height: 340px;
+}
+
+.sep_SSSH .c_SSSH .c_SSSH_list {
+	margin-top: 30px;
+	height: 237px;
+	margin-left: 10px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.sep_SSSH .c_SSSH .c_SSSH_list a{
+	font-size: 15px;
 }
