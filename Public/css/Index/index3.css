@@ -1,0 +1,118 @@
+* {
+	margin: 0 auto;
+}
+
+img {
+	width: 100%;
+}
+
+/**
+	顶部
+*/
+.top {
+	height: 60px;
+}
+
+.top .c_top {
+	height: 60px;
+}
+
+.top .c_top .top_r {
+	height: 25px;
+	width: 250px;
+	background-color: #0b0b0d;
+	line-height: 25px;
+	text-align: center;
+}
+
+/**
+	navbar
+*/
+.navbar {
+	background-color: #0b0b0d;
+}
+
+.navbar .navbar-brand img{
+	margin-top: -35px;
+}
+
+.navbar .navbar-right li a{
+	color: #FFF;
+	font-size: 15px;
+}
+
+.navbar .navbar-right li a:hover{
+	color: #a88a58;
+}
+
+.navbar .navbar-right .active a{
+	color: #a88a58;
+}
+
+.navbar .navbar-right .dropdown-menu{
+	background-color: #0b0b0d;
+}
+
+.navbar .navbar-right .dropdown-menu a{
+	color: #FFF;
+}
+
+.navbar .navbar-right .dropdown-menu a:hover{
+	color: #a88a58;
+	background-color: #0b0b0d;
+}
+
+/**
+	分割线
+*/
+.sep {
+	margin-top: 30px;
+	height: 65px;
+}
+.sep .c_sep {
+	height: 65px;
+}
+
+
+/**
+	轮播图
+*/
+.carousel {
+	height: 412px;
+}
+
+.carousel .c_carousel {
+	height: 412px;
+}
+
+.carousel .c_carousel .carousel_panel {
+	height: 352px;
+	background-color: black;
+}
+
+
+/**
+	欢迎&关注
+*/
+.welcome {
+	height: 95px;
+}
+
+.welcome .c_welcome {
+	height: 95px;
+}
+
+.welcome .c_welcome .w_left {
+	height: 95px;
+	line-height: 25px;
+}
+.welcome .c_welcome .w_left p{
+	line-height: 50px;
+}
+.welcome .c_welcome .w_sep {
+	
+}
+.welcome .c_welcome .w_right {
+	height: 95px;
+	line-height: 25px;
+}

@@ -49,7 +49,13 @@ class IndexController extends Controller {
     	$this -> display();
     }
 
+    //文峰视听css
     public function index1(){
+        $this -> display();
+    }
+
+    //文峰视听bootstrap
+    public function index3(){
         $this -> display();
     }
 }

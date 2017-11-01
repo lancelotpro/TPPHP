@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>文峰视听门户网站</title>
-	<!-- <link rel="stylesheet" type="text/css" href="/TPPHP/Public/BootStrap/css/ bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="/TPPHP/Public/BootStrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/TPPHP/Public/css/common.css">
 	<link rel="stylesheet" type="text/css" href="/TPPHP/Public/css/Index/index1.css">
-	<!-- <script type="text/javascript" src="/TPPHP/Public/BootStrap/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/TPPHP/Public/BootStrap/js/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="/TPPHP/Public/BootStrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/TPPHP/Public/BootStrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	

@@ -1,0 +1,38 @@
+/** 通用
+*/
+
+
+/**
+	顶部
+*/
+.top {
+	height: 60px;
+}
+
+.top .c_top {
+	height: 60px;
+}
+
+.top .c_top .top_r {
+	height: 25px;
+	width: 250px;
+	background-color: #0b0b0d;
+	line-height: 25px;
+	text-align: center;
+}
+
+/**
+	navbar
+*/
+.navbar {
+	height: 80px;
+	background: #0b0b0d;
+}
+
+.navbar .navbar-brand img{
+	margin-top: -35px;
+}
+
+.navbar .navbar-right {
+	height: 40px;
+}
