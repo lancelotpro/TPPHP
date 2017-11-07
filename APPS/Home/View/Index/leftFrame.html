@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<span>用户</span><a href="">退出登录</a>
+	<ul class="nav nav-pills nav-stacked">
+	  <li role="presentation" class="dropdown active">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+	      用户管理 <span class="caret"></span>
+	    </a>
+	    <ul class="dropdown-menu">
+	    	<li><a href="{:U('User/index')}" target="mainFrame">查看用户</a></li>
+	    	<li><a href="{:U('User/add')}" target="mainFrame">添加用户</a></li>
+	    </ul>
+	  </li>
+	  <li role="presentation"><a href="#">分类管理</a></li>
+	  <li role="presentation"><a href="#">品牌管理</a></li>
+	  <li role="presentation"><a href="#">商品管理</a></li>
+	  <li role="presentation"><a href="#">订单状态</a></li>
+	  <li role="presentation"><a href="#">订单管理</a></li>
+	</ul>
+</body>
+</html>

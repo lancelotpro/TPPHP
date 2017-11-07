@@ -2,7 +2,29 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+
+    //后台页面
     public function index(){
+        $this -> display();
+    }
+
+    /**
+        后台处理页面
+    */
+    public function topFrame(){
+        $this -> display();
+    }
+
+    public function leftFrame(){
+        $this -> display();
+    }
+
+    public function mainFrame(){
+        $this -> display();
+    }
+
+    //万年历
+    public function index2(){
     	//获取时间
     	$dateGet = I('get.date',null);
     	if($dateGet == null){
