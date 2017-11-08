@@ -7,8 +7,19 @@ class UserController extends Controller{
 	//查看用户
 	public function index(){
 		$user = M('User');
-		$rows = $user -> order("id") -> select();
-		$this -> users = $rows;
+		//总数量
+		$count = $user -> count();
+		//设置每一页的记录数
+		$page = new \Think\Page($count,10);
+		//设置分页类的样式
+		$page->setConfig('theme', '<li><a>共 %TOTAL_ROW% 条记录</a></li> <li>%UP_PAGE%</li> <li>%LINK_PAGE%</li>  <li>%DOWN_PAGE%</li>');
+		//最终展示
+		$show = $page -> show();
+		$list = $user -> order('id') -> limit($page->firstRow.','.$page->listRows) -> select();
+		//用户列表
+		$this -> users = $list;
+		//分页展示
+		$this -> page = $show;
 		$this -> display();
 	}
 
@@ -20,23 +31,46 @@ class UserController extends Controller{
 
 	//编辑
 	public function edit(){
+		$id = $_GET['id'];
+		$user = M('User');
+		$row = $user -> find($id);
+		$this -> user = $row;
 		$this -> display();
 	}
 
 	//新增
 	public function insert(){
-
+		$user = M('User');
+		$user -> create();
+		$user -> createtime = date('Y-m-d');
+		$user -> password = md5($_POST['password']);
+		if($user -> add()){
+			$this -> success('新增成功',U('index'));
+		}else{
+			$this -> error('新增失败',U('index'));
+		}
 	}
 
 	//更新
 	public function update(){
-
+		$user = M('User');
+		$user -> create();
+		$user -> password = md5($_POST['password']);
+		if($user -> save()){
+			$this -> success('修改成功',U('index'));
+		}
 	}
 
 
 	//删除
 	public function delete(){
-
+		$id = $_GET['id'];
+		$user = M('User');
+		if($user -> delete($id)){
+			$this -> success('删除成功!',U('index'));
+		}else{
+			$this -> success('删除失败，请重试!',U('index'));
+		}
 	}
 
 

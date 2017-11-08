@@ -27,11 +27,18 @@
 		    			<td>{$user.id}</td>
 		    			<td>{$user.username}</td>
 		    			<td>{$user.createtime}</td>
-		    			<td><a href="">编辑</a></td>
-		    			<td><a href="">删除</a></td>
+		    			<td><a href="__URL__/edit/id/{$user.id}">编辑</a></td>
+		    			<td><a href="__URL__/delete/id/{$user.id}">删除</a></td>
 		    		</tr>
 		    	</volist>
 		    </table>
+		    <!-- 分页 -->
+            <nav>
+              <ul class="pager">
+                {$page}
+              </ul>
+            </nav>
+
 		  </div>
 		</div>
 	 </div>
