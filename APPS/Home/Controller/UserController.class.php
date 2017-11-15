@@ -20,6 +20,7 @@ class UserController extends Controller{
 		$this -> users = $list;
 		//分页展示
 		$this -> page = $show;
+		
 		$this -> display();
 	}
 

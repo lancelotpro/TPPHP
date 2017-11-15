@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品添加</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h3>商品添加</h3>
+		<form action="{:U('insert')}" enctype="multipart/form-data" method="post">
+			<div class="form-group">
+				<input type="file" name="img" class="btn btn-default">
+			</div>
+			<div class="form-group">
+				<input type="submit" name="sumit" value="上传" class="btn btn-primary">
+				<input type="reset" name="reset" value="取消" class="btn btn-danger">
+			</div>
+			<img src="/TPPHP/Uploads/photo/2017-11-15/5a0b9fb5a42e0.png">
+		</form>
+	</div>
+</body>
+</html>

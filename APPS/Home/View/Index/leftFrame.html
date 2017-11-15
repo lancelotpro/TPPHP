@@ -7,7 +7,12 @@
 	<script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<span>用户</span><a href="">退出登录</a>
+	<span>
+	<empty name="$_SESSION['username']">
+		用户:{$_SESSION['username']}
+	</empty>
+	</span>
+	<a href="{:U('Login/logout')}" target="_top">退出登录</a>
 	<ul class="nav nav-pills nav-stacked">
 	  <li role="presentation" class="dropdown active">
 	    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -20,7 +25,15 @@
 	  </li>
 	  <li role="presentation"><a href="#">分类管理</a></li>
 	  <li role="presentation"><a href="#">品牌管理</a></li>
-	  <li role="presentation"><a href="#">商品管理</a></li>
+	  <li role="presentation" class="dropdown">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+	      商品管理 <span class="caret"></span>
+	    </a>
+	    <ul class="dropdown-menu">
+	    	<li><a href="{:U('')}" target="mainFrame">查看商品</a></li>
+	    	<li><a href="{:U('Shop/add')}" target="mainFrame">添加商品</a></li>
+	    </ul>
+	  </li>
 	  <li role="presentation"><a href="#">订单状态</a></li>
 	  <li role="presentation"><a href="#">订单管理</a></li>
 	</ul>
